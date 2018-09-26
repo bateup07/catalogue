@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Barclays API Catalogue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> </meta>
+    <link href="webjars/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen"> </link>
+
+</head>
+<body>
+<div class="container">
+
+    <div th:if="${not #lists.isEmpty(products)}">
+        <h2>API Catalogue</h2>
+
+        <div class="row">
+
+            <tr th:each="catalogue : ${products}">
+            <div class="col-xs-18 col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img th:src="@{/img/bank.jpeg}" alt="memorynotfound logo"/>
+                    <div class="caption">
+                        <h4><td th:text="${catalogue.header}">header</td></h4>
+                        <p><td th:text="${catalogue.description}">description</td></p>
+                        <a th:href="${'/product/' + catalogue.id}" class="btn btn-info btn-xs" role="button">View</a>
+                    </div>
+                </div>
+            </div>
+            </tr>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
