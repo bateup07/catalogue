@@ -27,3 +27,6 @@ Scope for improvement
 * Improved test cases for Catalogue Controller
 * Acceptance Criteria tests (cucumber)
 * Switch on DB connection facility
+
+===========================
+To view the catalogue please use this link http://localhost:8080/products
